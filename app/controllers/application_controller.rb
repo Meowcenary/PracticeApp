@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  #returning null session b/c requesting json not html
+  protect_from_forgery with: :null_session
 end

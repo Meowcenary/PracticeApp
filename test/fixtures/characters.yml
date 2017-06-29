@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  class: MyText
+  level: 
+  background: MyText
+  race: MyText
+  alignment: MyText
+  strength: 
+  dexterity: 
+  constitution: 
+  intelligence: 
+  wisdom: 
+  charisma: 
+
+two:
+  name: MyString
+  class: MyText
+  level: 
+  background: MyText
+  race: MyText
+  alignment: MyText
+  strength: 
+  dexterity: 
+  constitution: 
+  intelligence: 
+  wisdom: 
+  charisma: 
