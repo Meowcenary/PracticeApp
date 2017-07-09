@@ -10,8 +10,31 @@ var NewCharacter = React.createClass({
         var dexterity = this.refs.dexterity.value;
         var constitution = this.refs.constitution.value;
         var intelligence = this.refs.intelligence.value;
+        var wisdom = this.refs.wisdom.value;
         var charisma = this.refs.charisma.value;
-        console.log('success');
+
+        $.ajax({
+            url: '/api/v1/characters',
+            type: 'POST',
+            data: { character: {
+                                name: name,
+                                level: level,
+                                char_class: class_name,
+                                race: race,
+                                background: background,
+                                alignment: alignment,
+                                strength: strength,
+                                dexterity: dexterity,
+                                constitution: constitution,
+                                intelligence: intelligence,
+                                wisdom: wisdom,
+                                charisma: charisma,
+                               }
+                  },
+            success: (response) => {
+                console.log('create new character successful', response);
+            }
+        });
     },
 
     render() {
@@ -19,7 +42,7 @@ var NewCharacter = React.createClass({
             <div>
                 <h1>Create New Character</h1>
 
-                <input ref='name' placeholder='Enter the name of the character' />
+                <input ref='name' placeholder='Enter name' />
                 <input ref='level' placeholder='Enter level' />
                 <input ref='class_name' placeholder='Enter class' />
                 <input ref='race' placeholder='Enter race' />

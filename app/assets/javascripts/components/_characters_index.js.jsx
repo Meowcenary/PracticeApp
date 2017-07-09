@@ -8,11 +8,22 @@ var CharactersIndex = React.createClass({
         return { characters: [] }
     },
 
+    handleDelete(id) {
+        $.ajax({
+            url: "/api/v1/characters/" + id,
+            type: 'DELETE',
+            success(response) {
+                console.log('successfully removed item')
+            }
+        });
+    },
+
     render() {
         var characters = this.state.characters.map((character) => {
             return (
                 <div key={character.id}>
                     <CharactersDetails character={character}/>
+                    <button onClick={this.handleDelete.bind (this, character.id)}>Delete</button>
                 </div>
             )
         });

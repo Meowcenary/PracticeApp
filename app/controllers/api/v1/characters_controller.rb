@@ -4,11 +4,11 @@ class Api::V1::CharactersController < Api::V1::BaseController
   end
 
   def create
-    respond_with :api, :v1, Character.create(item_params)
+    respond_with :api, :v1, Character.create(character_params)
   end
 
   def destroy
-    respond_with :api, :v1, Character.destroy(params[:id])
+    respond_with Character.destroy(params[:id])
   end
 
   def update

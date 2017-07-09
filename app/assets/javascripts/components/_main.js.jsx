@@ -5,6 +5,7 @@ var Main = React.createClass({
 
     render() {
         return  <div>
+                    <NewCharacter />
                     <CharactersIndex />
                 </div>
     }
