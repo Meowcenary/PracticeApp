@@ -27,7 +27,6 @@ var Main = React.createClass({
         return  <div>
                     <button onClick={this.selectActivePane.bind(this, 'new_character_form')}>Add Character)1</button>
                     <button onClick={this.selectActivePane.bind(this, 'characters_index')}>Character Index</button>
->>>>>>> 344c69e5ad7efa846f6c84a8b0ea30aca912ba03
                     <br/>
                     {this.activePane()}
                 </div>
