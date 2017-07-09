@@ -1,7 +1,11 @@
 var Main = React.createClass({
+    componentDidMount() {
+        console.log('Component mounted');
+    },
+
     render() {
         return  <div>
-                   <h1>Hello, World!</h1>
+                    <CharactersIndex />
                 </div>
     }
 });

@@ -38,6 +38,8 @@ gem 'responders'
 # adds in generators for installing react to app
 gem 'react-rails'
 
+gem 'jquery-rails'
+
 # gem 'browserify-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
