@@ -1,6 +1,6 @@
 var Main = React.createClass({
     componentDidMount() {
-        console.log('Component mounted');
+        console.log('Main mounted');
     },
 
     getInitialState() {
@@ -14,25 +14,31 @@ var Main = React.createClass({
             return  <CharactersIndex />
         } else if(this.state.active_pane === 'new_character_form') {
             return <NewCharacter />
+        } else if(this.state.active_pane === 'items_index') {
+            return <ItemsIndex />
+        } else if(this.state.active_pane === 'new_item_form') {
+            return <NewItem/>
         }
     },
 
-    toggleNewCharacterFormActive() {
-        this.setState({
-            active_pane: 'new_character_form'
-        })
+    navButtons() {
+        return <div>
+            <button onClick={this.selectActivePane.bind(this, 'new_character_form')}>Add Character</button>
+            <button onClick={this.selectActivePane.bind(this, 'characters_index')}>Character Index</button>
+            <button onClick={this.selectActivePane.bind(this, 'new_item_form')}>Add Item</button>
+            <button onClick={this.selectActivePane.bind(this, 'items_index')}>Items Index</button>
+        </div>
     },
 
-    toggleCharactersIndexActive() {
+    selectActivePane(pane_name) {
         this.setState({
-            active_pane: 'characters_index'
+            active_pane: pane_name
         })
     },
 
     render() {
         return  <div>
-                    <button onClick={this.toggleNewCharacterFormActive}>Add Character</button>
-                    <button onClick={this.toggleCharactersIndexActive}>Character Index</button>
+                    {this.navButtons()}
                     <br/>
                     {this.activePane()}
                 </div>
