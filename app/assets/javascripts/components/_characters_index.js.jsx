@@ -1,6 +1,6 @@
 var CharactersIndex = React.createClass({
     componentDidMount() {
-        console.log('Component mounted');
+        console.log('CharactersIndex mounted');
         $.getJSON('/api/v1/characters.json', (response) => { this.setState({ characters: response }) });
     },
 
