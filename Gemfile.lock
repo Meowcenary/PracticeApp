@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/twbs/bootstrap-rubygem
+  revision: b156edfee2b9629ad4751ee2a118a04f824ef9eb
+  specs:
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.9.9, < 2.0)
+      sass (>= 3.4.19)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,6 +50,8 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (8.0.0)
+    autoprefixer-rails (7.1.2.1)
+      execjs
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -97,6 +108,7 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
+    popper_js (1.10.8)
     public_suffix (2.0.5)
     puma (3.8.2)
     rack (2.0.3)
@@ -191,6 +203,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap!
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)

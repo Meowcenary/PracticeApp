@@ -38,7 +38,14 @@ gem 'responders'
 # adds in generators for installing react to app
 gem 'react-rails'
 
+#make jquery available, AJAX looks nicer
 gem 'jquery-rails'
+
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
+#these two gems are both bootstrap stuff
+# gem 'bootstrap-sass', '~> 3.2.0'
+# gem 'autoprefixer-rails'
 
 # gem 'browserify-rails'
 # Use Capistrano for deployment

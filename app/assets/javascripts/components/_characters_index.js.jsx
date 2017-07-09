@@ -21,7 +21,7 @@ var CharactersIndex = React.createClass({
     render() {
         var characters = this.state.characters.map((character) => {
             return (
-                <div key={character.id}>
+                <div className="col-md-6" key={character.id}>
                     <CharactersDetails character={character}/>
                     <button onClick={this.handleDelete.bind (this, character.id)}>Delete</button>
                 </div>
@@ -29,9 +29,13 @@ var CharactersIndex = React.createClass({
         });
 
         return(
-            <div>
-                <h1>Characters</h1>
-                {characters}
+            <div className="container">
+                <div className="col-lg-1 col-centered">
+                    <h1>Characters</h1>
+                </div>
+                <div className="row">
+                    {characters}
+                </div>
             </div>
         )
     }
