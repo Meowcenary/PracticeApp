@@ -17,26 +17,16 @@ var Main = React.createClass({
         }
     },
 
-    toggleNewCharacterFormActive() {
+    selectActivePane(pane_name) {
         this.setState({
-            active_pane: 'new_character_form'
+            active_pane: pane_name
         })
     },
-
-    toggleCharactersIndexActive() {
-        this.setState({
-            active_pane: 'characters_index'
-        })
-    },
-
-    // bind the active pane key e.g characters_index to the button and pass as arg
-    // selectActivePane(pane_name)
-    // switch statement
 
     render() {
         return  <div>
-                    <button onClick={this.toggleNewCharacterFormActive}>Add Character</button>
-                    <button onClick={this.toggleCharactersIndexActive}>Character Index</button>
+                    <button onClick={this.selectActivePane.bind(this, 'new_character_form')}>Add Character)1</button>
+                    <button onClick={this.selectActivePane.bind(this, 'characters_index')}>Character Index</button>
                     <br/>
                     {this.activePane()}
                 </div>
