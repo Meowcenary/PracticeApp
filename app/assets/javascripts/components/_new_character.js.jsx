@@ -37,7 +37,7 @@ var NewCharacter = React.createClass({
         });
     },
 
-    render() {
+    form() {
         return (
             <div>
                 <h1>Create New Character</h1>
@@ -58,5 +58,9 @@ var NewCharacter = React.createClass({
                 <button onClick={this.handleClick}>Submit</button>
             </div>
         )
+    },
+
+    render() {
+        return this.form();
     }
 });
