@@ -29,6 +29,10 @@ var Main = React.createClass({
         })
     },
 
+    // bind the active pane key e.g characters_index to the button and pass as arg
+    // selectActivePane(pane_name)
+    // switch statement
+
     render() {
         return  <div>
                     <button onClick={this.toggleNewCharacterFormActive}>Add Character</button>
