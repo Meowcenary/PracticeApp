@@ -41,19 +41,42 @@ var NewCharacter = React.createClass({
         return (
             <div>
                 <h1>Create New Character</h1>
-
-                <input ref='name' placeholder='Enter name' />
-                <input ref='level' placeholder='Enter level' />
-                <input ref='class_name' placeholder='Enter class' />
-                <input ref='race' placeholder='Enter race' />
-                <input ref='background' placeholder='Enter background' />
-                <input ref='alignment' placeholder='Enter alignment' />
-                <input ref='strength' placeholder='Enter strength' />
-                <input ref='dexterity' placeholder='Enter dexterity' />
-                <input ref='constitution' placeholder='Enter constitution' />
-                <input ref='intelligence' placeholder='Enter intelligence' />
-                <input ref='wisdom' placeholder='Enter wisdom' />
-                <input ref='charisma' placeholder='Enter charisma' />
+                <div className='cold-md-4'>
+                    <input ref='name' placeholder='Enter name' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='level' placeholder='Enter level' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='class_name' placeholder='Enter class' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='race' placeholder='Enter race' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='background' placeholder='Enter background' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='alignment' placeholder='Enter alignment' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='strength' placeholder='Enter strength' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='dexterity' placeholder='Enter dexterity' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='constitution' placeholder='Enter constitution' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='intelligence' placeholder='Enter intelligence' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='wisdom' placeholder='Enter wisdom' />
+                </div>
+                <div className='cold-md-4'>
+                    <input ref='charisma' placeholder='Enter charisma' />
+                </div>
 
                 <button onClick={this.handleClick}>Submit</button>
             </div>

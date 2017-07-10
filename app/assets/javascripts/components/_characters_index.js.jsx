@@ -18,11 +18,16 @@ var CharactersIndex = React.createClass({
         });
     },
 
+    handleEdit(id) {
+        console.log(id);
+    },
+
     render() {
         var characters = this.state.characters.map((character) => {
             return (
-                <div className="col-md-6" key={character.id}>
+                <div className="col-md-4 index-tile" key={character.id}>
                     <CharactersDetails character={character}/>
+                    <button onClick={this.handleEdit.bind (this, character.id)}>Edit</button>
                     <button onClick={this.handleDelete.bind (this, character.id)}>Delete</button>
                 </div>
             )
