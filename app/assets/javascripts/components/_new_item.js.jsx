@@ -17,13 +17,21 @@ var NewItem = React.createClass({
         });
     },
 
+    clear_input() {
+        this.refs.name.value = "";
+        this.refs.description.value = "";
+    },
+
     form() {
             return (
                 <div>
                     <h1>Create New Item</h1>
-
-                    <input ref='name' placeholder='Enter name' />
-                    <input ref='description' placeholder='Enter description' />
+                    <div className='cold-md-4'>
+                        <input ref='name' placeholder='enter name' />
+                    </div>
+                    <div className='cold-md-4'>
+                        <input ref='description' placeholder='enter description' />
+                    </div>
 
                     <button onClick={this.handleClick}>Submit</button>
                 </div>

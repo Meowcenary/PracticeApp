@@ -18,21 +18,24 @@ var ItemsIndex = React.createClass({
         });
     },
 
+    handleEdit(id) {
+        console.log(id);
+    },
+
     render() {
         var items = this.state.items.map((item) => {
             return (
-                <div className="col-lg-1 col-centered">
-                    <div className="col-sm-4" key={item.id}>
+                    <div className="col-md-4 index-tile" key={item.id}>
                         <h2>{item.name}</h2>
                         <h3>{item.description}</h3>
+                        <button onClick={this.handleEdit.bind (this, item.id)}>Edit</button>
                         <button onClick={this.handleDelete.bind (this, item.id)}>Delete</button>
                     </div>
-                </div>
             )
         });
 
         return(
-            <div className="container">
+            <div className="container-fluid">
                 <div className="col-lg-1 col-centered">
                     <h1>Items</h1>
                 </div>

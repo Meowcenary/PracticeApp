@@ -17,6 +17,11 @@ class Api::V1::CharactersController < Api::V1::BaseController
     respond_with char, json: char
   end
 
+  def get_character_info
+    char = Character.find(params["id"])
+    respond_with char, json: char
+  end
+
   private
 
   def character_params

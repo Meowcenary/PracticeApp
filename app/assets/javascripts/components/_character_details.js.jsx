@@ -1,7 +1,6 @@
 var CharactersDetails = React.createClass({
     render() {
         character = this.props.character
-
         return <div>
             <br/>
             <h2>Name: {character.name}</h2>

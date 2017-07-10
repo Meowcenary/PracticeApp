@@ -1,0 +1,4 @@
+Future Plans:
+	*figure out how to copy servers quickly / document how to make aws server
+	*add redux to the application
+	*add a real deployment method (current is ok , not great)
