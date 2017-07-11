@@ -41,7 +41,12 @@ gem 'react-rails'
 #make jquery available, AJAX looks nicer
 gem 'jquery-rails'
 
+#bootstrap added to application
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
+#from tutorial for deployment to aws
+gem 'figaro' #save application data
+# gem 'puma' #application server
 
 #these two gems are both bootstrap stuff
 # gem 'bootstrap-sass', '~> 3.2.0'
@@ -66,6 +71,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # deployment stuff
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

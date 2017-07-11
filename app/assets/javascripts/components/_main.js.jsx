@@ -17,7 +17,7 @@ var Main = React.createClass({
         } else if(this.state.active_pane === 'items_index') {
             return <ItemsIndex />
         } else if(this.state.active_pane === 'new_item_form') {
-            return <NewItem/>
+            return <NewItem />
         }
     },
 

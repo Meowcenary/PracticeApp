@@ -17,6 +17,11 @@ var NewItem = React.createClass({
         });
     },
 
+    clear_input() {
+        this.refs.name.value = "";
+        this.refs.description.value = "";
+    },
+
     form() {
             return (
                 <div>

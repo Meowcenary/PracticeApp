@@ -35,7 +35,7 @@ var ItemsIndex = React.createClass({
         });
 
         return(
-            <div className="container">
+            <div className="container-fluid">
                 <div className="col-lg-1 col-centered">
                     <h1>Items</h1>
                 </div>

@@ -35,6 +35,23 @@ var NewCharacter = React.createClass({
                 console.log('create new character successful', response);
             }
         });
+
+        this.clear_input();
+    },
+
+    clear_input() {
+        this.refs.name.value="";
+        this.refs.level.value="";
+        this.refs.class_name.value="";
+        this.refs.race.value="";
+        this.refs.background.value="";
+        this.refs.alignment.value="";
+        this.refs.strength.value="";
+        this.refs.dexterity.value="";
+        this.refs.constitution.value="";
+        this.refs.intelligence.value="";
+        this.refs.wisdom.value="";
+        this.refs.charisma.value="";
     },
 
     form() {
