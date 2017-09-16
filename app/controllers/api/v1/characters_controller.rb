@@ -11,6 +11,10 @@ class Api::V1::CharactersController < Api::V1::BaseController
     respond_with Character.destroy(params[:id])
   end
 
+  def delete_all
+    respond_with Character.destroy_all
+  end
+
   def update
     char = Character.find(params["id"])
     char.update_attributes(char_params)
