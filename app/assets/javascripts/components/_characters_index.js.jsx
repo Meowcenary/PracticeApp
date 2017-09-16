@@ -22,6 +22,16 @@ var CharactersIndex = React.createClass({
         });
     },
 
+    deleteAll() {
+        $.ajax({
+            url: "/api/v1/characters/delete_all",
+            type: 'PUT',
+            success(response) {
+                console.log('successfully removed all characters')
+            }
+        })
+    },
+
     handleEdit(id) {
         console.log(id);
     },
@@ -33,6 +43,16 @@ var CharactersIndex = React.createClass({
             character: character,
             characters: []
         })
+    },
+
+    get_char_ids() {
+        char_ids = []
+        for (index in this.state.characters) {
+            character = this.state.characters[index];
+            char_ids.push(character.id)
+        }
+
+        return char_ids
     },
 
     findCharacterById(id) {
