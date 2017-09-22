@@ -1,4 +1,19 @@
-Future Plans:
-	*figure out how to copy servers quickly / document how to make aws server
-	*add redux to the application
-	*add a real deployment method (current is ok , not great)
+The purpose of this file is to semi-track the changes I want to make and what
+I have done to actually implement the changes. This is one of many side projects
+so the interval dates will likely be very large and the resolutions minimal.
+
+09/22/17 Version 0
+  New / Unresolved:
+    *add react router to the application
+      -router seems to be installed, but not doing anything useful yet
+    *add redux to the application
+    *add devise for authentication
+    *add automated confirmation email
+    *lock down API so not just anyone can create things
+      -directly dependent on having devise in the application
+
+  Resolved:
+  	*figure out how to copy servers quickly / document how to make aws server
+      - readme has most of the information on how to do this
+  	*add a real deployment method (current is ok , not great)
+      - passenger is now good to go on the staging (only) environment!
