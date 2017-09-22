@@ -35,6 +35,14 @@ tagged as the latest stable build before the process begins
 again. Realistically there will be inconsistencies in the
 process, but it's something to aim for at least.
 
+### TODO.txt
+
+This file is being used as a sort changelog and means of tracking 
+features and bugs instead of using a proper sprint board. The
+reasoning is that in a one person project there should be no need
+for long term tracking with a board and instead just a means to
+remind what has changed recently and what the next big goals are.
+
 ### Troubleshooting Passenger Deployment
 
 One issue that occurred during installation was the Sqlite3 gem
