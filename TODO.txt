@@ -8,7 +8,10 @@ so the interval dates will likely be very large and the resolutions minimal.
       -router seems to be installed, but not doing anything useful yet
     *add redux to the application
     *add devise for authentication
-    *add automated confirmation email
+      *verify routes work for action mailer on stage.
+        Reference this file: /Users/Admin/PracticeApp/config/environments/production.rb
+        and this line: config.action_mailer.default_url_options = { host: 'bagofmanythings.com', port: 25 }
+      *add automated confirmation email
     *lock down API so not just anyone can create things
       -directly dependent on having devise in the application
 
