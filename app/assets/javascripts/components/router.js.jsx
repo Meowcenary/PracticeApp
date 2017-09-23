@@ -6,5 +6,3 @@ var IndexLink = ReactRouter.IndexLink;
 var IndexRedirect = ReactRouter.IndexRedirect;
 var hashHistory = ReactRouter.hashHistory;
 var browserHistory = ReactRouter.browserHistory;
-
-debugger;
