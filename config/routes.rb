@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'site#index'
+
+  scope :auth do
+    get 'is_signed_in', to: 'auth#is_signed_in?'
+  end
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
 
   namespace :api do
     namespace :v1 do

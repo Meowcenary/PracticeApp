@@ -1,11 +1,12 @@
 var CharactersIndex = React.createClass({
     componentDidMount() {
-        console.log('CharactersIndex mounted');
-        $.getJSON('/api/v1/characters.json', (response) => { this.setState({ characters: response }) });
+        $.getJSON('/api/v1/characters.json', (response) => {
+            this.setState({ characters: response })
+        });
     },
 
     getInitialState() {
-        return { characters: [] }
+        return { characters: []}
     },
 
     getCharacters() {
@@ -72,31 +73,35 @@ var CharactersIndex = React.createClass({
     },
 
     render() {
-        var characters = this.state.characters.map((character) => {
-            return (
-                <div className="col-md-4 index-tile" key={character.id}>
-                    <CharactersDetails character={character} />
-                    <button onClick={this.handleEdit.bind (this, character.id)}>Edit</button>
-                    <button onClick={this.handleDelete.bind (this, character.id)}>Delete</button>
-                    <button onClick={this.handleInfoSheet.bind (this, character.id)}>Info Sheet</button>
+        if(this.state.signed_in === true) {
+            var characters = this.state.characters.map((character) => {
+                return (
+                    <div className="col-md-4 index-tile" key={character.id}>
+                        <CharactersDetails character={character} />
+                        <button onClick={this.handleEdit.bind (this, character.id)}>Edit</button>
+                        <button onClick={this.handleDelete.bind (this, character.id)}>Delete</button>
+                        <button onClick={this.handleInfoSheet.bind (this, character.id)}>Info Sheet</button>
+                    </div>
+                )
+            });
+
+            if (this.state.character != null) {
+                var character_info_sheet = <CharacterInformationSheet character={this.state.character} returnToCharIndex={this.returnToCharactersIndex}/>
+            }
+
+            return(
+                <div className="container-fluid">
+                    <div className="col-lg-1 col-centered">
+                        <h1>Characters</h1>
+                    </div>
+                    <div className="row">
+                        {characters}
+                        {character_info_sheet}
+                    </div>
                 </div>
             )
-        });
-
-        if (this.state.character != null) {
-            var character_info_sheet = <CharacterInformationSheet character={this.state.character} returnToCharIndex={this.returnToCharactersIndex}/>
+        } else {
+                return <SignInForm />
         }
-
-        return(
-            <div className="container-fluid">
-                <div className="col-lg-1 col-centered">
-                    <h1>Characters</h1>
-                </div>
-                <div className="row">
-                    {characters}
-                    {character_info_sheet}
-                </div>
-            </div>
-        )
     }
 });
