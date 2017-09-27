@@ -38,8 +38,9 @@ var Main = React.createClass({
                 return <NewItem />
             }
         } else {
+            debugger;
                 if(this.state.active_pane === 'sign_up_form') {
-                    return <SignUpForm />
+                    return <SignUpForm selectActivePane={this.selectActivePane}/>
                 } else {
                     return <SignInForm selectActivePane={this.selectActivePane}/>
                 }
@@ -63,6 +64,7 @@ var Main = React.createClass({
     },
 
     selectActivePane(pane_name) {
+        debugger;
         this.setState({
             active_pane: pane_name
         })

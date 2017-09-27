@@ -34,6 +34,10 @@ var SignInForm = React.createClass({
       }.bind(this));
     },
 
+    selectActivePane() {
+        this.props.selectActivePane('sign_up_form');
+    },
+
     render() {
       return (<div>
         <form>
@@ -41,15 +45,15 @@ var SignInForm = React.createClass({
               name='email'
               placeholder='email'
               value={this.state.email}
-              onChange={this._handleInputChange} />
+              onChange={this.handleInputChange} />
             <input type='password'
               name='password'
               placeholder='password'
               value={this.state.password}
-              onChange={this._handleInputChange} />
-             <button onClick={this.props.selectActivePane('sign_up_form')} label={'Dick'}/>
-            <input type='submit' onClick={this._handleSignInClick} defaultValue='login' />
+              onChange={this.handleInputChange} />
+            <input type='submit' onClick={this.handleSignInClick} />
         </form>
+        <button onClick={this.selectActivePane}>Create Account</button>
       </div>
       )
     }

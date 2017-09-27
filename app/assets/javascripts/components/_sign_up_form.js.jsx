@@ -48,19 +48,19 @@ var SignUpForm = React.createClass({
                 name='name'
                 placeholder='name'
                 value={this.state.name}
-                onChange={this._handleInputChange} />
+                onChange={this.handleInputChange} />
 
               <input type='email'
                 name='email'
                 placeholder='email'
                 value={this.state.email}
-                onChange={this._handleInputChange} />
+                onChange={this.handleInputChange} />
 
               <input type='password'
                 name='password'
                 placeholder='password'
                 value={this.state.password}
-                onChange={this._handleInputChange} />
+                onChange={this.handleInputChange} />
 
               <input type='password'
                 name='password_confirmation'
@@ -68,7 +68,7 @@ var SignUpForm = React.createClass({
                 value={this.state.password_confirmation}
                 onChange={this.handleInputChange} />
 
-              <input onClick={this._handleRegistrationClick} defaultValue="sign up"/>
+              <button onClick={this.handleRegistrationClick}>sign up</button>
           </form>
       )
     }
