@@ -4,19 +4,43 @@ so the interval dates will likely be very large and the resolutions minimal.
 
 09/22/17 Version 0
   New / Unresolved:
-    *add react router to the application
-      -router seems to be installed, but not doing anything useful yet
+    Highest priority to lowest:
+
+    Infrastructure
+    --------------
     *add redux to the application
     *add devise for authentication
       *verify routes work for action mailer on stage.
         Reference this file: /Users/Admin/PracticeApp/config/environments/production.rb
         and this line: config.action_mailer.default_url_options = { host: 'bagofmanythings.com', port: 25 }
       *add automated confirmation email
-    *lock down API so not just anyone can create things
-      -directly dependent on having devise in the application
+    *add react router to the application
+      -router seems to be installed, but not doing anything useful yet
+    *consider different options for adding style to the site
+      -options would include things like Material.Ui or maybe some more advance CSS with boostrap?
+
+    Below here are all same priority for now
+
+    Basic Character Creation
+    ------------------------
+    Character Creation Form
+    *install some tool for easy validation 
+    *modify model for Character with new attributes
+
+    Generate Character PDF
+    *get pdf template of dnd 5e
+    *install prawnpdf gem from: https://github.com/prawnpdf/prawn
+    *not considering items and inventory at this point in time
+
+    Level Up Character Tool
+    *Create some sort of workflow that can be easily used for all the classes
+      - each step of the way present options on what choices there are and offer
+        alerts for new abilities and changes to character sheet
+        - maybe show character sheet with highlighting around changes?
+    *To start DO NOT allow multiclassing (that'll get complicated)
 
   Resolved:
-  	*figure out how to copy servers quickly / document how to make aws server
+    *figure out how to copy servers quickly / document how to make aws server
       - readme has most of the information on how to do this
-  	*add a real deployment method (current is ok , not great)
+    *add a real deployment method (current is ok , not great)
       - passenger is now good to go on the staging (only) environment!
