@@ -1,5 +1,15 @@
 ### README
 
+### IMPORTANT
+
+This is the readme for the branch of the project that was planned to use react
+with rails on the backend. Things have changed at my job and we're doing a lot
+less react stuff and instead of practicing more react (which I don't like
+particularly much) I thought it made more sense to practice writing an app and
+trying to keep it clean and well written. Maybe someday the react branches will
+be active again, but for now this serves as an epitapth to reacts involvement in
+this project.
+
 Rails 5.1.1
 Ruby  2.3.0
 
@@ -37,7 +47,7 @@ process, but it's something to aim for at least.
 
 ### TODO.txt
 
-This file is being used as a sort changelog and means of tracking 
+This file is being used as a sort changelog and means of tracking
 features and bugs instead of using a proper sprint board. The
 reasoning is that in a one person project there should be no need
 for long term tracking with a board and instead just a means to
@@ -67,7 +77,7 @@ for multiple users use the below command.
   curl -L https://get.rvm.io | sudo bash -s stable
 
 Next add the users you want with the next command.
-  
+
   sudo usermod -a -G rvm <user>
 
 When you it comes time to deploy the app ensure the proper version
