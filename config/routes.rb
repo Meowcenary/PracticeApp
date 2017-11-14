@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'site#index'
+  devise_for :users, path: "", controllers: { sessions: "sessions", registrations: "registrations" }, path_names: { sign_in: 'login', password: 'forgot', confirmation: 'confirm', unlock: 'unblock',
+                                                                                                                    sign_up: 'register', sign_out: 'signout'}
 
-  namespace :api do
-    namespace :v1 do
-      resources :characters, only: [:index, :create, :destroy, :update]
+  root to: 'welcome#index'
 
-      get '/characters/:id', to: 'characters#get_character_info'
-      put '/characters/delete_all', to: 'characters#delete_all'
+  # this needs to be replaced piece by piece, but there isn't much at all so it should
+  # be pretty straightforward work
 
-      resources :items, only: [:index, :create, :destroy, :update]
-    end
-  end
+  # namespace :api do
+  #   namespace :v1 do
+  #     resources :characters, only: [:index, :create, :destroy, :update]
+  #
+  #     get '/characters/:id', to: 'characters#get_character_info'
+  #     put '/characters/delete_all', to: 'characters#delete_all'
+  #
+  #     resources :items, only: [:index, :create, :destroy, :update]
+  #   end
+  # end
 end

@@ -18,6 +18,9 @@
 !/tmp/.keep
 .DS_store
 
+# Ignore sqlite database file
+practice_development
+
 /node_modules
 /yarn-error.log
 

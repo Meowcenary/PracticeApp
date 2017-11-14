@@ -12,15 +12,18 @@
  *
  *= require_tree .
  *= require_self
+ //= require foundation_and_overrides
+
  */
 
-@import "bootstrap";
-
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
-
-.index-tile {
-  margin-top: 5em;
-}
+@import 'utilities';
+@import 'foundation_and_overrides';
+@import 'foundation-icons';
+// .col-centered{
+//     float: none;
+//     margin: 0 auto;
+// }
+//
+// .index-tile {
+//   margin-top: 5em;
+// }
