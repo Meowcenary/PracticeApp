@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users, path: "", controllers: { sessions: "sessions", registrations: "registrations" }, path_names: { sign_in: 'login', password: 'forgot', confirmation: 'confirm', unlock: 'unblock',
-                                                                                                                    sign_up: 'register', sign_out: 'signout'}
+  get 'registrations/new'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  devise_for :users, path: "", controllers: { sessions: "sessions", registrations: "registrations" }
+                               # path_names: { sign_in: 'login', password: 'forgot', confirmation: 'confirm',
+                                               # unlock: 'unblock', sign_up: 'register', sign_out: 'signout'}
 
   root to: 'welcome#index'
 
